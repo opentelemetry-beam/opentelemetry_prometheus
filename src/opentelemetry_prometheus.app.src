@@ -1,0 +1,17 @@
+{application, opentelemetry_prometheus,
+ [{description, "OpenTelemetry Prometheus Metric Exporter"},
+  {vsn, "git"},
+  {registered, []},
+  {applications,
+   [kernel,
+    stdlib,
+    prometheus,
+    opentelemetry,
+    opentelemetry_api
+   ]},
+  {env,[]},
+  {modules, []},
+
+  {licenses, ["Apache-2.0"]},
+  {links, []}
+ ]}.

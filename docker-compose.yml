@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    volumes:
+      - ./promconfig.yaml:/etc/prometheus/promconfig.yaml
+    command:
+      - '--config.file=/etc/prometheus/promconfig.yaml'
+    expose:
+      - 9090
+    ports:
+      - "9090:9090"
+    network_mode: host
